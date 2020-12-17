@@ -1,10 +1,7 @@
 import { StateContextProvider } from "./context/state.context";
 
-import UiParam from './components/ui-param/ui-param';
-import Timer from './components/timer/timer';
-import Count from './components/count/count';
-
 import elements from './constants/elements';
+import { Timer, UiParam, Count } from './components';
 
 function App() {
   return (
