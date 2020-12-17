@@ -1,19 +1,22 @@
 import React, { useState, createContext  } from "react";
 
 const initialState = {
-  counter: false,
-  target: null
+  target: 'ElementA',
+  timer: {
+    tick: false,
+    interval: 1000,
+    counter: 0,
+  }
 }
 
 export const StateContext = createContext(initialState);
 
-export const CounterContextProvider = props => {
-  const [count, setCount] = useState(0);
+export const StateContextProvider = props => {
+  const [state, setState] = useState(initialState);
 
   return (
-    <StateContext.Provider value={[count, setCount]}>
-            {props.children}
+    <StateContext.Provider value={[state, setState]}>
+      {props.children}
     </StateContext.Provider>
-  
   );
 };
