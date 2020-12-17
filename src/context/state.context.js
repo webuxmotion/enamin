@@ -1,7 +1,9 @@
 import React, { useState, createContext  } from "react";
 
+import elements from '../constants/elements';
+
 const initialState = {
-  target: 'ElementA',
+  target: elements.B,
   timer: {
     tick: false,
     interval: 1000,
